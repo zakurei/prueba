@@ -13,8 +13,9 @@
 		$dbname = getenv("OPENSHIFT_APP_NAME");
 
 		mysql_connect($dbhost, $dbuser, $dbpassword) or die(mysql_error());
-		mysql_select_db($dbname) or die(mysql_error());
-		$result = mysql_query("SELECT * FROM users") or die(mysql_error());
+		mysql_set_charset("utf8")
+mysql_select_db($dbname) or die(mysql_error());
+		$result = mysql_query("SELECT * FROM Usuarios") or die(mysql_error());
 	?>
 	<table border cellpadding=3>
 		<tr>
